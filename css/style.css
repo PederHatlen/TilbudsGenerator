@@ -14,12 +14,12 @@ body{
 	background: white;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: auto 1fr;
+	grid-template-rows: auto 1fr auto;
 }
 
-header, main{padding: 10px 50px;}
+header, main, footer{padding: 10px 50px;}
 header{background: #ff9ef1;}
-header, main, form, #generatedBox{
+header, main, form, #generatedBox, footer{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -39,7 +39,7 @@ input[type="number"]{
 	-moz-appearance:textfield !important;
 	text-align: center;
 }
-input[type="submit"], button, ::placeholder, textarea{
+input[type="submit"], button, ::placeholder, textarea, input[type="text"], input[type="number"]{
 	font-family: 'Pacifico', cursive;
 }
 input[type="submit"], button{

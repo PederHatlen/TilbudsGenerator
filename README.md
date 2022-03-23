@@ -1,1 +1,1 @@
-# TilbudsGenerator
+# Tilbudsgenerator

@@ -12,7 +12,6 @@ let dekoderPrice = 399;
 let wifiExtPrice = 499;
 
 
-
 function formatList(l) {
 	if (l.length > 1) { return l.slice(0, -1).join(", ") + " og " + l.slice(-1); }
 	else if (l.length == 1) { return l.join(); }
@@ -85,8 +84,9 @@ function formSubmit(e) {
 		}
 		text += `\nTotal engangspris er ${Math.round((onetimeSum-onetimeRabattKr)*100)/100}kr.\n`;
 	}
+
 	text += `-`.repeat(50);
-	console.log(monthlySum, monthlyRabattKr);
+
 	if(monthlyPurchases.length > 0 && onetimePurchases.length > 0){
 		let sum = monthlySum + onetimeSum;
 
@@ -95,41 +95,6 @@ function formSubmit(e) {
 		text += ".\n";
 	}
 	text += `\nDet er bare å svare på denne eposten hvis du har noen spørsmål.\nMed vennlig hilsen ${fData.get("selger")}.`;
-
-
-	// Hei <navn på kunde> og takk for en hyggelig telefonsamtale.
-	// Sender deg som avtalt tilbud på <produkt1> (og <produktx>).
-	// Prisen vil da bli
-	// <produkt1> <pris produkt 1> kr
-	// <produkt2> <pris produkt 2> kr
-	// osv
-	// Rabatt <rabatt %> <rabatt> kr
-	// Totalt <sum> kr
-	// Det er bare å svare på denne eposten hvis du har noen spørsmål.
-	// Med vennlig hilsen <navn>
-
-	// Hei <navn på kunde> og takk for en hyggelig telefonsamtale.
-	// Sender deg som avtalt tilbud på <produkt1>( og <produkt2>).
-
-	// Prisen vil da bli
-	// --------------------------------------------------
-	// <produkt1> .................. <produkt1 pris> kr
-	// <produkt2> .................. <produkt2 pris> kr
-	// osv.
-	// --------------------------------------------------
-	// Månedlig pris uten rabatt er <m.pris>.
-	// Månedlig rabatt <m.rabatt>% er -<rabbat% av pris>kr/måneden
-	// Total månedlig pris er <m.pris-rabbat% av pris>kr.
-
-	// Engangsprisen uten rabatt er <e.pris>kr.
-	// Engangs-rabatt <e.rabatt>% er -<rabbat% av pris>kr
-	// Total engangspris er <e.pris-rabbat% av pris>kr.
-	// --------------------------------------------------
-	// Totalt <total pris>kr nå (ink. denne måneden), og <månedlig pris (hvis den er der)>kr/måneden etter det.
-
-	// Det er bare å svare på denne eposten hvis du har noen spørsmål.
-	// Med vennlig hilsen <navn>.
-
 
 	console.log(text);
 	textareaEl.value = text;

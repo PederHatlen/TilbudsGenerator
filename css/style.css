@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html, body{
+	padding: 0;
+	margin: 0;
+}
+html{height: 100%; background-color: pink;}
+body{
+	font-size: 1rem;
+	font-family: 'Pacifico', cursive;
+	width: 75%;
+	min-height: 100%;
+	margin: 0 auto;
+	background: white;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+}
+
+header, main{padding: 10px 50px;}
+header{background: #ff9ef1;}
+header, main, form, #generatedBox{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h1, h2, h3, form{margin: 0; width: fit-content;}
+input, button{
+	background: peachpuff;
+	border: none;
+	padding: 5px;
+}
+input:focus:not(input[type="radio"], input[type="checkbox"]), textarea:focus{outline: peachpuff solid;}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none !important;
+	margin: 0 !important;
+}
+input[type="number"]{
+	-moz-appearance:textfield !important;
+	text-align: center;
+}
+input[type="submit"], button, ::placeholder, textarea{
+	font-family: 'Pacifico', cursive;
+}
+input[type="submit"], button{
+	border: 2px transparent solid;
+	border-radius: 2%;
+	padding: 2px;
+	margin: 5px;
+}
+input[type="submit"]:hover, button:hover{
+	background: pink;
+	border: 2px #ff9ef1 solid;
+	cursor: pointer;
+}
+hr{
+	border: 0;
+	border-top: 2px #ff9ef1 solid;
+	border-radius: 100%;
+	width: 100%;
+}
+th{text-align: left;}
+table{border-spacing: 20px 5px;}
+
+#generatedBox{
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+textarea{
+	resize: none;
+	margin: 10px;
+	outline: 0;
+	border: 0;
+	background: pink;
+	width: 100%;
+	height: 100%;
+}
+.horizontal{
+	display: flex;
+	align-items: center;
+}
+
+@media all and (orientation: portrait) {
+	body{
+		width: 100%;
+	}
+}

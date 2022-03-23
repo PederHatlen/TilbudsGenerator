@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tilbudsgenerator</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header><h1>Tilbudsgenerator <3</h1></header>
+	<main>
+		<form id="form">
+			<h2>Person info</h2>
+			<table>
+				<tr><td><label for="kunde">Kunde navn:</label></td><td><input type="text" name="kunde" id="kunde" placeholder="Kundenavn"></td></tr>
+				<tr><td><label for="selger">Selger navn:</label></td><td><input type="text" name="selger" id="selger" placeholder="Selgernavn"></td></tr>
+			</table>
+			<hr>
+			<h3>Månedlig</h3>
+			<table>
+				<tr><th>Produkt</th><th>Pris</th><th>Velg</th></tr>
+				<tr><td>Uendret</td><td>--</td><td><input type="radio" name="internett" value="0" id="unchanged" checked></td></tr>
+				<tr><td>Internett 50mbit</td><td>399,00 kr</td><td><input type="radio" name="internett" value="50" id="internett50"></td></tr>
+				<tr><td>Internett 100mbit</td><td>599,00 kr</td><td><input type="radio" name="internett" value="100" id="internett100"></td></tr>
+				<tr><td>Internett 300mbit</td><td>799,00 kr</td><td><input type="radio" name="internett" value="300" id="internett300"></td></tr>
+				<tr><td>Internett 500mbit</td><td>999,00 kr</td><td><input type="radio" name="internett" value="500" id="internett500"></td></tr>
+			</table>
+			<h3>Engangs</h3>
+			<table>
+				<tr><th>Produkt</th><th>Pris</th><th>Velg</th></tr>
+				<tr><td>Ekstra TV-dekoder</td><td>399,00 kr</td><td><input type="number" name="TV" id="TV" min="0" max="100" value="0"></td></tr>
+				<tr><td>Wifi-extender</td><td>499,00 kr</td><td><input type="number" name="WIFI-ext" id="WIFI-ext"min="0" max="100" value="0"></td></tr>
+			</table>
+			<hr>
+			<h3>Rabatter</h3>
+			<table>
+				<tr><td><label for="maanedlig">Månedlig</label></td><td><input type="number" name="maanedlig" id="maanedlig" min="0" max="100" value="0">%</td></tr>
+				<tr><td><label for="engang">Engang</label></td><td><input type="number" name="engang" id="engang" min="0" max="100" value="0">%</td></tr>
+			</table>
+			<hr>
+			<input type="submit" id="makeEMail" value="Generer Epost <3">
+		</form>
+		<div id="generatedBox">
+			<div class="horizontal"><button id="edit">Rediger</button><button id="copy">Kopier!</button></div>
+			<textarea id="generatedText" disabled></textarea>
+		</div>
+		<span id="info"></span>
+	</main>
+	<script src="js/script.js"></script>
+</body>
+</html>

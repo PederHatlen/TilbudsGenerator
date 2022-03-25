@@ -111,3 +111,14 @@ editBtnEl.addEventListener("click", function (e) {
 	generatedBoxEl.style.display = "none";
 	formEl.style.display = "flex";
 });
+
+let warModeActive = false;
+function warMode(){
+	if (warModeActive) {
+		document.getElementById("warMode").remove();
+		warModeActive = false;
+	}else{
+		document.head.innerHTML += "<link rel=\"stylesheet\" href=\"css/warMode.css\" id=\"warMode\">";
+		warModeActive = true;
+	}
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+body, input[type="submit"], button, ::placeholder, textarea, input[type="text"], input[type="number"]{font-family: 'Cutive Mono', monospace;}
+
+:root{
+	--html-background: rgb(90, 109,48);
+	--secondary: #4D4D26;
+	--inputColor: #3C4D5F;
+}
+body{
+	color: white;
+	background: black;
+}
+
+textarea, input, ::placeholder, button{
+	color: white;
+}
